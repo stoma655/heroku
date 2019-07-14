@@ -18,7 +18,7 @@ io.on('connection', function(socket){
 
     socket.on('spavned', function(){
         // console.log('заспавнили бота')
-        var sid = socket.id;
+        var sid = 'a' + socket.id;
         io.emit('spavned on area', sid);
     });
 

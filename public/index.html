@@ -51,8 +51,6 @@ var ul = document.querySelector('#messages');
         document.addEventListener('mousemove', function(e) {
             var x = e.pageX - 50;
             var y = e.pageY - 50;
-            // character.style.top = y + "px";
-            // character.style.left = x + "px";
             socket.emit('set coords', [x,y,uourId]);
         });
     };

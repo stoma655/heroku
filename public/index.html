@@ -57,7 +57,7 @@ var ul = document.querySelector('#messages');
 
     socket.on('get enemy coords', function(data) {
         console.log(data);
-        character = document.querySelector('.player[number='+ data[2] +']');
+        character = document.querySelector('.player[number=a'+ data[2] +']');
         character.style.top = data[1] + "px";
         character.style.left = data[0] + "px";
     });

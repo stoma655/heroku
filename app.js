@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
+require('dotenv').config();
 
 app.use(express.static('public'));
 
@@ -27,6 +28,6 @@ io.on('connection', function(socket){
 
 });
 
-http.listen(3000, function(){
-    console.log('listening on *:3000');
+http.listen(process.env.PORT , function(){
+    console.log('listening on *:'+ process.env.PORT +'');
   });
